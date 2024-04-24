@@ -8,10 +8,10 @@ function App() {
   return (
     <>
       <div className="w-full flex flex-col justify-center items-center">
-        <div className="flex justify-center items-center w-3/4 p-4 m-8 bg-primary rounded-lg shadow-custom">
+        <div className="flex justify-center items-center w-[95%] md:w-11/12 p-4 m-8 bg-primary rounded-lg shadow-custom">
           <h1 className="text-3xl font-bold ">ToDo List</h1>
         </div>
-        <div className="flex flex-col bg-secondary w-3/4 rounded-lg items-center shadow-custom">
+        <div className="flex flex-col bg-secondary w-[95%] md:w-11/12 rounded-lg items-center justify-center shadow-custom">
           <TaskInput />
           <TaskList tasks={tasks} />
         </div>
