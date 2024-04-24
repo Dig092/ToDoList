@@ -1,27 +1,31 @@
-import PropTypes from "prop-types";
-import { useDispatch } from "react-redux";
-import { deleteTask, toggleTaskCompleted } from "./actions"; // Assuming you have an action to toggle task completion
-import { FaTrash } from "react-icons/fa"; // Import delete icon from react-icons
+import PropTypes from "prop-types"; 
+import { useDispatch } from "react-redux"; 
+import { deleteTask, toggleTaskCompleted } from "./actions";
+import { FaTrash } from "react-icons/fa"; 
 
 function TaskList({ tasks }) {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch(); // Get dispatch function for Redux actions
 
+  // Function to handle task deletion
   const handleDeleteTask = (taskId) => {
-    dispatch(deleteTask(taskId));
+    dispatch(deleteTask(taskId)); // Dispatch deleteTask action with taskId
   };
 
+  // Function to handle checkbox change for task completion
   const handleCheckboxChange = (taskId) => {
-    dispatch(toggleTaskCompleted(taskId)); // Dispatch action to toggle task completion
+    dispatch(toggleTaskCompleted(taskId)); // Dispatch toggleTaskCompleted action with taskId
   };
 
   return (
     <div className="w-11/12 m-4 justify-center items-center">
+      {/* Map over tasks array and render each task */}
       {tasks.map((task) => (
         <div
           key={task.id}
           className="w-full flex items-center justify-between border-2 border-black rounded-lg mb-6"
         >
           <div className="flex items-center">
+            {/* Checkbox for task completion */}
             <div className="w-16 m-2">
               <input
                 className="w-full h-8 border-4 border-black rounded-lg"
@@ -30,6 +34,7 @@ function TaskList({ tasks }) {
                 onChange={() => handleCheckboxChange(task.id)}
               />
             </div>
+            {/* Task name with conditional line-through styling if completed */}
             <h1
               className={`text-lg font-normal ${
                 task.completed ? "line-through" : ""
@@ -55,6 +60,7 @@ function TaskList({ tasks }) {
   );
 }
 
+// PropTypes for tasks prop validation
 TaskList.propTypes = {
   tasks: PropTypes.arrayOf(
     PropTypes.shape({
