@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       {/* Main container for the entire application */}
-      <div className="w-full flex flex-col justify-center items-center">
+      <div className="w-full flex flex-col justify-center items-center font-sans">
         {/* Header section */}
         <div className="flex justify-center items-center w-[95%] md:w-11/12 p-4 m-8 bg-primary rounded-lg shadow-custom">
           <h1 className="text-3xl font-bold ">ToDo List</h1>{" "}

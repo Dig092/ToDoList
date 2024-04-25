@@ -12,7 +12,12 @@ export default {
       },
       boxShadow: {
         'custom': '4px 8px 0 rgba(0, 0, 0, 1)'
-      }
+      },
+      fontFamily: {
+        sans: ['Custom Font', 'sans-serif'],
+        serif: ['Georgia', 'Cambria', 'Times New Roman', 'serif'],
+        mono: ['Menlo', 'Monaco', 'Courier New', 'monospace'],
+      },
     },
   },
   plugins: [],

@@ -37,7 +37,7 @@ function TaskInput() {
         />
         {/* Render button or plus sign based on screen size */}
         <button
-          className="bg-primary w-36 text-sm font-medium border-2 border-black px-4 py-2 rounded-lg hidden md:block" // Hide on mobile
+          className="bg-primary w-44 text-sm font-medium border-2 border-black px-4 py-3 rounded-lg hidden md:block" // Hide on mobile
           onClick={handleAddTask}
         >
           Create New Task

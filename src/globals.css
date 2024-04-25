@@ -2,3 +2,9 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+@font-face {
+    font-family: 'Custom Font';
+    src: url('/IBMPlexMono-SemiBold.ttf') format('woff2'), /* For modern browsers */
+         url('/IBMPlexMono-SemiBold.ttf') format('woff');   /* For older browsers */
+    /* Additional font properties like font-weight and font-style can be specified here */
+  }
