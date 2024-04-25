@@ -24,7 +24,7 @@ A simple ToDo list application built with React, Redux, and Tailwind CSS.
 
 ## Demo
 
-You can see a live demo of the application [here](https://example.com).
+You can see a live demo of the application [here](https://to-do-list-beige-gamma.vercel.app/).
 
 ## Installation
 
